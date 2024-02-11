@@ -1,0 +1,16 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["{{authors}}"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+# Optimize release binary a little
+strip = true  # Automatically strip symbols from the binary.
+lto = true # make binary smaller at the cost of slower compilation
+
+[dependencies]
+nannou = "0.19"
